@@ -152,16 +152,16 @@ function mostrarFormulario() {
   formularioComprarCarrito.classList.add("form");
   formularioComprarCarrito.style.display = "flex";
   formularioComprarCarrito.innerHTML = `
-  <form id="formulario" class="row g-3 container-fluid needs-validation" novalidate>
+  <form id="formulario" class="row g-3 container-fluid">
     <div class="col-md-6">
-      <label for="inputName" class="form-label">Nombre</label>
-      <input type="text" id="inputName" class="form-control" aria-describedby="passwordHelpBlock" required>   
+      <label for="inputName" class="form-label">Nombre completo</label>
+      <input type="text" id="inputName" class="form-control" aria-describedby="passwordHelpBlock" required
       <div class="form-text">Enter your full name without special characters</div>
     </div>
-    <div class="mb-3 col-md-6">
-        <label for="exampleInputEmail1" class="form-label">Dirección email</label>
-        <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    <div class="col-md-6 mb-3">      
+      <label for="email" class="form-label">Email</label>
+      <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" required>
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
     </div>
     <div class="col-md-6">
       <label for="validationCustom03" class="form-label">City</label>
@@ -194,7 +194,7 @@ function mostrarFormulario() {
       </div>
     </div>
     <div id="boton--comprar--formulario" class="btn--contain--formulario">
-      <button id="btn--formulario" class="btn--formulario" type="submit">Comprar</button>
+      <button  id="btn--formulario" type="submit" class="btn--formulario">COMPRAR</button>
     </div>
   </form>
   `;
@@ -219,7 +219,7 @@ function mostrarFormulario() {
 
   botonComprarCarritoFormulario.addEventListener("click", carritoComprado);
   function carritoComprado(e) {
-    if (inputNombre.value === "" && inputEmail.value === "") {
+    if (inputNombre.value === "" || inputEmail.value === "") {
       Swal.fire({
         position: "top-center",
         icon: "info",
