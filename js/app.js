@@ -36,7 +36,7 @@ function mostrarProductos(producSelect) {
     let content = document.createElement("div");
     content.className = "col-lg-3 col-md-4 col-sm-6 d-flex";
     content.innerHTML = `
-        <div class="card w-100 my-2 shadow-2-strong category">
+        <div class="card w-100 my-2 shadow-2-strong category mb-3">
             <img src="${producto.imagen}" class="card-img-top" style="aspect-ratio: 1 / 1" / alt="${producto.nombrePrincipal}>
             <div class="card-body d-flex flex-column">
                <h5 class="card-title titulo--producto">${producto.nombrePrincipal}</h5>

@@ -321,6 +321,8 @@ h2 {
 .card {
   background-color: rgb(241, 222, 207);
   transition: 1s;
+  margin-top: 4%;
+  margin-bottom: 10%;
 }
 .card:hover {
   transform: scale(1.1);
